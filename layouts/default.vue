@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Хуета</h1>
+    <h1>Шаблонный код</h1>
     <slot />
   </div>
 </template>
