@@ -3,8 +3,12 @@ import { DefineComponent } from 'nuxt/dist/app/compat/capi';
 
 export class BaseWrap<T extends DefineComponent<any, any, any, any, any>> {
   constructor(component: T, options?: ComponentMountingOptions<T>) {
-    this.component = mount(component, options);
+    this.component = mount(component, options)
   }
 
-  protected component;
+  protected component
+
+  protected findByTestId(id: string) {
+    return this.component.find(`[data-test="${id}"]`)
+  }
 }

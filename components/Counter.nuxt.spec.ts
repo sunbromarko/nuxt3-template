@@ -4,9 +4,9 @@ import { CounterService, SomeClass } from '~~/services/CounterService'
 import { BaseWrap } from '@/shared/utils/tests/BaseWrap'
 
 class CounterWrap extends BaseWrap<typeof Counter> {
-  counter = this.component.find('[data-test="counter"]')
-  incrementBtn = this.component.find('[data-test="increment"]')
-  decrementBtn = this.component.find('[data-test="decrement"]')
+  counter = this.findByTestId('counter')
+  incrementBtn = this.findByTestId('increment')
+  decrementBtn = this.findByTestId('decrement')
 
   get counterValue() {
     return Number(this.counter.text())
