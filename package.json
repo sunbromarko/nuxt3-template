@@ -8,12 +8,13 @@
     "postinstall": "nuxt prepare",
     "test": "nuxi test",
     "nuxt-ts-check": "nuxt typecheck",
-    "test:dev": "NUXT_VITEST_DEV_TEST=true nuxt dev",
-    "test:unit": "vitest --run --reporter verbose"
+    "test:unit": "vitest run --reporter verbose",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
     "@nuxt/test-utils": "^3.3.1",
+    "@vitest/coverage-c8": "^0.29.7",
     "jsdom": "^21.1.1",
     "nuxt": "^3.3.1",
     "nuxt-vitest": "^0.6.9",
