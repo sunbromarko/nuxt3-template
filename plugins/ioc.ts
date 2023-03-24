@@ -10,18 +10,7 @@ export default defineNuxtPlugin(() => {
   return {
     provide: {
       ioc: container,
+      default: 100500,
     },
   }
 })
-
-declare module '#app' {
-  interface NuxtApp {
-    $ioc: Container
-  }
-}
-
-declare module 'vue' {
-  interface ComponentCustomProperties {
-    $hello: Container
-  }
-}

@@ -5,8 +5,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
-  typescript: {
-    strict: true,
-    
-  },
+  modules: [
+    'nuxt-vitest',
+    '@nuxt/devtools',
+    // 'nuxt-typed-router' // TODO: Написать issue разрабу, ломается автокомплит в верстке
+  ],
 })

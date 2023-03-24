@@ -1,15 +1,15 @@
 <template>
-  <v-app id="inspire">
-    <v-main>
+  <div id="inspire">
+    <div>
       <InjectTest />
       <inject-test />
       <inject-test />
-    </v-main>
-  </v-app>
+      <nuxt-link to=''>Ссылка прямо в ад</nuxt-link>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-
 
 definePageMeta({
   layout: 'empty',

@@ -6,20 +6,30 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "nuxt-ts-check": "nuxt typecheck"
+    "test": "nuxi test",
+    "nuxt-ts-check": "nuxt typecheck",
+    "test:dev": "NUXT_VITEST_DEV_TEST=true nuxt dev",
+    "test:unit": "vitest --run --reporter verbose"
   },
   "devDependencies": {
-    "@nuxt/kit": "^3.3.1",
-    "nuxt": "^3.2.3",
+    "@nuxt/devtools": "^0.2.5",
+    "@nuxt/test-utils": "^3.3.1",
+    "jsdom": "^21.1.1",
+    "nuxt": "^3.3.1",
+    "nuxt-vitest": "^0.6.9",
     "sass": "^1.56.1",
     "typescript": "^4.9.5",
+    "vitest": "^0.29.7",
     "vue-tsc": "^1.2.0"
   },
   "dependencies": {
     "@mdi/font": "^7.0.96",
+    "@vue/test-utils": "^2.3.2",
     "inversify": "^6.0.1",
     "inversify-binding-decorators": "^4.0.0",
+    "nuxt-typed-router": "^3.0.7",
     "reflect-metadata": "^0.1.13",
-    "vuetify": "^3.1.8"
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify": "npm:@vuetify/nightly@latest"
   }
 }
