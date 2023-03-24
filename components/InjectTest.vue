@@ -1,14 +1,14 @@
 <template>
-  <div variant="outlined" class="ma-4 pa-4">
+  <v-card variant="outlined" class="ma-4 pa-4">
     <h1>COUNTER на IOC контейнере</h1>
     <h2>{{ counterService.counter }}</h2>
-    <button class="mx-1" color="success" variant="elevated" @click="() => counterService.increment()"
-      >УВЕЛИЧИТЬ</button
+    <v-btn class="mx-1" color="success" variant="elevated" @click="() => counterService.increment()"
+      >УВЕЛИЧИТЬ</v-btn
     >
-    <button class="mx-1" color="error" variant="elevated" @click="() => counterService.decrement()"
-      >УМЕНЬШИТЬ</button
+    <v-btn class="mx-1" color="error" variant="elevated" @click="() => counterService.decrement()"
+      >УМЕНЬШИТЬ</v-btn
     >
-    </div>
+    </v-card>
 </template>
 
 <script setup lang="ts">

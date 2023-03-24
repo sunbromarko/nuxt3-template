@@ -10,5 +10,5 @@ export default defineVitestConfig({
       inline: ['vuetify'],
     },
   },
-  plugins: [vuetify({ autoImport: true, styles: 'none' })],
+  plugins: [vuetify({ autoImport: true })],
 })

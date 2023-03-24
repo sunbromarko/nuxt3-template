@@ -2,13 +2,12 @@ import { beforeAll, describe, it, expect } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
 import { config, mount } from '@vue/test-utils'
 import InjectTest from '../components/InjectTest.vue'
+import Page from '../pages/index.vue'
 import { Container } from 'inversify'
 import { CounterService, SomeClass } from '~~/services/CounterService'
+import {createVuetify} from 'vuetify'
 
 describe('InjectTest component', () => {
-    beforeAll(() => {
-      ;(global as any).CSS = { supports: () => false }
-    })
   beforeAll(() => {
     const container = useNuxtApp().$ioc
     container.bind(CounterService).toSelf()
