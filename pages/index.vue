@@ -1,9 +1,9 @@
 <template>
   <v-app id="inspire">
     <v-main>
-      <InjectTest />
-      <inject-test />
-      <inject-test />
+      <counter />
+      <counter />
+      <counter />
       <nuxt-link to=''>Ссылка прямо в ад</nuxt-link>
     </v-main>
   </v-app>

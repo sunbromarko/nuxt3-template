@@ -22,8 +22,6 @@ export class CounterService {
   }
 
   increment() {
-    console.log('a');
-    
     this._counter += 5
   }
 
