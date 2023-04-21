@@ -5,7 +5,7 @@ import { Injectable } from '../shared/decorators/injectable.decorator'
 
 @Injectable()
 export class SomeClass {
-  defaultCount = useNuxtApp().$default
+  defaultCount = 10;
 }
 
 @Injectable()

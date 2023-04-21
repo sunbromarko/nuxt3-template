@@ -9,8 +9,7 @@ export default defineNuxtPlugin(() => {
 
   return {
     provide: {
-      ioc: container,
-      default: 100500,
+      ioc: container
     },
   }
 })
