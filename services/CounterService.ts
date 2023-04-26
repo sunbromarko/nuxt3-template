@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+import '@abraham/reflection'
 import { singleton } from 'tsyringe'
 import { ObservableObject, ObservableProperty } from '~/shared/decorators/observable.decorator'
 

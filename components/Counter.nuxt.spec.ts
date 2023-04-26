@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+import '@abraham/reflection'
 import { beforeAll, describe, it, expect } from 'vitest'
 import Counter from './Counter.vue'
 import { CounterService, SomeClass } from '~~/services/CounterService'

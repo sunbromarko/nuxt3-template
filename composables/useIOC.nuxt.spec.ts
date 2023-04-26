@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+import '@abraham/reflection'
 import { singleton } from 'tsyringe'
 import { describe, expect, it } from 'vitest'
 

@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+import '@abraham/reflection'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { CounterService, SomeClass } from './CounterService'
 
