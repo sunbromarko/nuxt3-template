@@ -1,9 +1,9 @@
-import { Container } from 'inversify'
+import { DependencyContainer, container } from 'tsyringe'
 import { describe, it, expect, beforeAll, vi } from 'vitest'
 
 describe('client-side nuxt features', () => {
   it('can use core nuxt composables within test file', () => {
-    expect(useNuxtApp().$ioc).instanceOf(Container)
+    expect(useNuxtApp().$ioc).toBe(container)
   })
 
   it('can access injections from nuxt plugins', () => {
@@ -11,7 +11,7 @@ describe('client-side nuxt features', () => {
     expect(app.$router).toBeDefined()
   })
 
-  it('global CSS = HUETA', ()=>{
+  it('global CSS = HUETA', () => {
     expect(global.CSS.supports('s')).toBe(false)
   })
 })

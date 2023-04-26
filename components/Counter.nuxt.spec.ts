@@ -1,7 +1,21 @@
+import 'reflect-metadata'
 import { beforeAll, describe, it, expect } from 'vitest'
 import Counter from './Counter.vue'
 import { CounterService, SomeClass } from '~~/services/CounterService'
 import { BaseWrap } from '@/shared/utils/tests/BaseWrap'
+import { singleton } from 'tsyringe'
+
+@singleton()
+class Papa {
+  someField: string = 'Papa successfully injected'
+}
+
+@singleton()
+class Mama {
+  constructor(private papa: Papa) {
+    console.log(papa.someField)
+  }
+}
 
 class CounterWrap extends BaseWrap<typeof Counter> {
   counter = this.findByTestId('counter')
@@ -26,8 +40,14 @@ describe('InjectTest component', () => {
 
   beforeAll(() => {
     const container = useNuxtApp().$ioc
-    container.bind(CounterService).toSelf()
-    container.bind(SomeClass).toSelf()
+
+    console.log(container.isRegistered(CounterService))
+
+    const service = container.resolve(CounterService)
+
+    console.log({ service })
+
+    const mama = container.resolve(Mama)
   })
 
   it('Counter Service is Available', () => {

@@ -1,18 +1,13 @@
-import { injectable } from 'inversify'
-import { beforeAll, describe, expect, it } from 'vitest'
+import 'reflect-metadata'
+import { singleton } from 'tsyringe'
+import { describe, expect, it } from 'vitest'
 
-@injectable()
+@singleton()
 class RegisteredMock {}
 
-@injectable()
 class UnregisteredMock {}
 
 describe('COMPOSABLE: useIOC', () => {
-  beforeAll(() => {
-    const container = useNuxtApp().$ioc
-    container.bind(RegisteredMock).toSelf()
-  })
-
   it('should be defined', () => {
     expect(useIOC).toBeTypeOf('function')
   })
@@ -23,7 +18,7 @@ describe('COMPOSABLE: useIOC', () => {
     expect(mock).instanceOf(RegisteredMock)
   })
 
-  it('should throw error if class does not registered',()=>{
+  it('should throw error if class does not registered', () => {
     useIOC(UnregisteredMock)
   })
 })

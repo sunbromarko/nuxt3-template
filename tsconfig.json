@@ -1,11 +1,9 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "module": "commonjs",
+    "target": "ES2022",
+    "module": "ES2022",
     "skipLibCheck": true,
-    "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "types": ["reflect-metadata", "vuetify"],
