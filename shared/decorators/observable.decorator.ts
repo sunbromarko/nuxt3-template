@@ -14,7 +14,7 @@ export function ObservableObject<T extends S>() {
         super(...rest)
         const propertiesNames = Object.getOwnPropertyNames(this)
         for (const propertyName of propertiesNames) {
-          const isObservable = Reflect.getMetadata(metadataKey, this, propertyName)
+          const isObservable = Reflect.getMetadata<boolean>(metadataKey, this, propertyName)
           if (isObservable) {
             const proxy = ref(this[propertyName])
             Reflect.defineProperty(this, propertyName, {

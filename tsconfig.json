@@ -6,7 +6,7 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["reflect-metadata", "vuetify"],
+    "types": ["vuetify"],
     "plugins": []
   },
   "extends": "./.nuxt/tsconfig.json"

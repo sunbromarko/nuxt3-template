@@ -4333,10 +4333,10 @@ nuxi@3.4.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-typed-router@^3.0.7:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/nuxt-typed-router/-/nuxt-typed-router-3.1.4.tgz#c81e9f3c18d4c615060581885182a99b1c00f132"
-  integrity sha512-OfqVehSOYxkz1h93jxzSxLlfkdnZiMeA9s76KZe2sVe/mN7DbRJ+EVVaFxYHNFJwp7CA91kFmWKKJeE/RvSFmA==
+nuxt-typed-router@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/nuxt-typed-router/-/nuxt-typed-router-3.1.5.tgz#6e604ada2ad18d9a852af78e70ec9b4754757028"
+  integrity sha512-wnI66Or/4bTYZVKpKpQwH5ffeqJuC+sBEc3Bco18iXLb7U1ywh+A7iSMnPDyxoz3BW1QXh4ErlRVXBYU87ORzg==
   dependencies:
     "@nuxt/kit" "^3.4.1"
     chalk "^5.2.0"
@@ -5144,11 +5144,6 @@ redis-parser@^3.0.0:
   integrity sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==
   dependencies:
     redis-errors "^1.0.0"
-
-reflect-metadata@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
-  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 require-directory@^2.1.1:
   version "2.1.1"

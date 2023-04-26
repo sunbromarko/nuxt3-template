@@ -1,6 +1,5 @@
 import { defineVitestConfig } from 'nuxt-vitest/config'
 import typescript from '@rollup/plugin-typescript'
-import vuetify from 'vite-plugin-vuetify'
 
 export default defineVitestConfig({
   test: {
@@ -15,6 +14,5 @@ export default defineVitestConfig({
   },
   plugins: [
     typescript(), // Плагин для восстановления поддержки декораторов в Vite
-    vuetify({ autoImport: true }),
   ],
 })
